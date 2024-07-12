@@ -1,0 +1,69 @@
+function removeDuplicatesUsingSet(arr) {
+  return [...new Set(arr)];
+}
+
+const names = ["John", "Jane", "Peter", "John", "Alice"];
+const uniqueNames = removeDuplicatesUsingSet(names);
+console.log(uniqueNames); // Output: ["John", "Jane", "Peter", "Alice"]
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Components Demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evSX huddled7su3Wr6tXNqZxAEj0zT9y0TR0(hElq2s6BGLXhkmzNrE1p9YC6tSXz" crossorigin="anonymous">
+</head>
+<body>
+
+  <div class="container">
+
+    <h2>Bootstrap Alerts</h2>
+    <div class="alert alert-primary" role="alert">
+      This is a primary alert!
+    </div>
+    <div class="alert alert-secondary" role="alert">
+      This is a secondary alert.
+    </div>
+    <div class="alert alert-success" role="alert">
+      This is a success alert!
+    </div>
+    <div class="alert alert-danger" role="alert">
+      This is a danger alert!
+    </div>
+    <div class="alert alert-warning" role="alert">
+      This is a warning alert.
+    </div>
+    <div class="alert alert-info" role="alert">
+      This is an informational alert.
+    </div>
+
+    <h2>Bootstrap Buttons</h2>
+    <button type="button" class="btn btn-primary">Primary Button</button>
+    <button type="button" class="btn btn-secondary">Secondary Button</button>
+    <button type="button" class="btn btn-success">Success Button</button>
+    <button type="button" class="btn btn-danger">Danger Button</button>
+    <button type="button" class="btn btn-warning">Warning Button</button>
+    <button type="button" class="btn btn-info">Info Button</button>
+    <br>
+    <a href="#" class="btn btn-primary btn-lg">Large Button</a>
+    <a href="#" class="btn btn-secondary btn-sm">Small Button</a>
+
+    <h2>Bootstrap Cards</h2>
+    <div class="card mb-3" style="width: 18rem;">
+      <img src="image.jpg" class="card-img-top" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a sample card content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-OgwbZS7/BXzYhFVNqO1ayay4ucy8jqYOzEGUcbkYe//zjlxtZqKgONsTtStz09Kg" crossorigin="anonymous"></script>
+</body>
+</html>
