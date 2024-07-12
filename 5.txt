@@ -1,41 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Carousel Example</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evSX huddled7su3Wr6tXNqZxAEj0zT9y0TR0(hElq2s6BGLXhkmzNrE1p9YC6tSXz" crossorigin="anonymous">
+</head>
+<body>
+
+  <div class="container">
+
+    <h2>Image Carousel</h2>
+    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="image1.jpg" class="d-block w-100" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+          <img src="image2.jpg" class="d-block w-100" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+          <img src="image3.jpg" class="d-block w-100" alt="Slide 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-OgwbZS7/BXzYhFVNqO1ayay4ucy8jqYOzEGUcbkYe//zjlxtZqKgONsTtStz09Kg" crossorigin="anonymous"></script>
+</body>
+</html>
 
 
 
-<?xml version="1.0" encoding="UTF-8"?>
-<bookstore>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Calculator</title>
+  <style>
+    .calculator {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+    }
 
-  <book category="cooking">
-    <title lang="en">Everyday Italian</title>
-    <author>Giada De Laurentiis</author>
-    <year>2005</year>
-    <price>30.00</price>
-  </book>
+    .display {
+      font-size: 24px;
+      background-color: #eee;
+      border: none;
+      padding: 10px;
+      text-align: right;
+    }
 
-  <book category="children">
-    <title lang="en">Harry Potter</title>
-    <author>J K. Rowling</author>
-    <year>2005</year>
-    <price>29.99</price>
-  </book>
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
 
-  <book category="web">
-    <title lang="en">XQuery Kick Start</title>
-    <author>James McGovern</author>
-    <author>Per Bothner</author>
-    <author>Kurt Cagle</author>
-    <author>James Linn</author>
-    <author>Vaidyanathan Nagarajan</author>
-    <year>2003</year>
-    <price>49.99</price>
-  </book>
+    .buttons button {
+      width: 45%;
+      height: 50px;
+      font-size: 18px;
+      background-color: #ddd;
+      border: none;
+      cursor: pointer;
+    }
 
-  <book category="web" cover="paperback">
-    <title lang="en">Learning XML</title>
-    <author>Erik T. Ray</author>
-    <year>2003</year>
-    <price>39.95</price>
-  </book>
+    .buttons button:hover {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" class="display" id="result" disabled>
+    <div class="buttons">
+      <button onclick="appendNumber(7)">7</button>
+      <button onclick="appendNumber(8)">8</button>
+      <button onclick="appendNumber(9)">9</button>
+      <button onclick="selectOperator('/')">/</button>
+      <button onclick="appendNumber(4)">4</button>
+      <button onclick="appendNumber(5)">5</button>
+      <button onclick="appendNumber(6)">6</button>
+      <button onclick="selectOperator('*')">*</button>
+      <button onclick="appendNumber(1)">1</button>
+      <button onclick="appendNumber(2)">2</button>
+      <button onclick="appendNumber(3)">3</button>
+      <button onclick="selectOperator('-')">-</button>
+      <button onclick="appendNumber(0)">0</button>
+      <button onclick="clearScreen()">C</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="selectOperator('+')">+</button>
+    </div>
+  </div>
 
-</bookstore>
+<script>
+let currentNumber = "";
+let previousNumber = "";
+let operator = "";
 
+function appendNumber(number) {
+  currentNumber += number;
+  document.getElementById("result").value = currentNumber;
+}
 
+function selectOperator(op) {
+  previousNumber = currentNumber;
+  currentNumber = "";
+  operator = op;
+}
+
+function clearScreen() {
+  currentNumber = "";
+  previousNumber = "";
+  operator = "";
+  document.getElementById("result").value = "";
+}
+
+function calculate() {
+  let result = 0;
+  switch (operator) {
+    case "+":
+      result = parseFloat(previousNumber) + parseFloat(currentNumber);
+      break;
+    case "-":
+      result = parseFloat(previousNumber) - parseFloat(currentNumber);
+      break;
+    case "*":
+      result = parseFloat(previousNumber) * parseFloat(currentNumber);
+      break;
+    default:
+      break;
+  }
+  currentNumber = result.toString();
+  previousNumber = "";
+  operator = "";
+  document.getElementById("result").value = currentNumber;
+}
+</script>
+</body>
+</html>
