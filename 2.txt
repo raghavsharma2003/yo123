@@ -1,137 +1,66 @@
-style.css
-p.left
-{
-text-align:left;
-color:blue;
-font-family:Cambria;
-font-size:large;
-text-indent:20px;
-}
-p.center
-{
- text-align:center;
- text-decoration:underline;
- text-transform:uppercase;
- letter-spacing:-3px;
- word-spacing:20px;
- font-size:larger;
-}
-p.right
-{
- text-align:right;
- color:red;
- font-family:Tahoma;
- font-size:15pt;
- text-decoration:overline;
- font-style:italic;
-}
-b#headline
-{
- color:orange;
- font-size:22px;
- font-family:arial;
- text-decoration:underline;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CSS Style Examples</title>
+  <link rel="stylesheet" href="styles.css">  </head>
+<body>
 
+  <h2>Inline Styles</h2>
+  <p style="color: red; font-size: 18px;">This paragraph uses inline styles.</p>
 
-<html>
- <head>
- <style type="text/css">
- body
- {
- background-image:url('images/cse.png');
- background-repeat:no-repeat;
- background-position:center center;
- background-attachment:fixed;
- background-color:pink;
- }
- a:link { text-decoration:none;color:orange; }
- a:visited { text-decoration:none;color:red; }
- a:hover { text-decoration:underline;color:blue; }
- a:active { text-decoration:underline;color:purple; }
- h3 { color:green; }
- .c1{cursor:crosshair}
- .c2{cursor:pointer}
- .c3{cursor:move}
- .c4{cursor:text}
- .c5{cursor:wait}
- .c6{cursor:help}
- </style>
- <link rel="stylesheet" type="text/css" href="style.css">
- </head>
-<body bgcolor="cyan">
- <h1 style="color:blue;text-align:center;"> CSS (Inline, Internal and External) </h1>
- <p>This Paragraph is a Not Styled</p>
- <p class="left">This Paragraph is Styled by class "Left"</p>
- <p class="center">This Paragraph is Styled by class "Center"</p>
- <p class="right">This Paragraph is Styled by class "Right"</p>
- <b>This is normal Bold</b> <br>
- <b id="headline">This Bold Text is Styled </b>
+  <h2>Internal Styles</h2>
+  <style>
+    .internal-styles {
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      width: 300px;
+      height: 100px;
+      background-color: lightblue;
+    }
+  </style>
+  <p class="internal-styles">This paragraph uses internal styles.</p>
 
- <h2><b><a href=" ">This is a link</a></b></h2>
- <h3 class="c1">The cursor over this element is plus sign</h3>
- <h3 class="c2">The cursor over this element is a pointing hand</h3>
- <h3 class="c3">The cursor over this element is a grasping hand</h3>
- <h3 class="c4">The cursor over this element is a I bar</h3>
- <h3 class="c5">The cursor over this element is a wait</h3>
- <h3 class="c6">The cursor over this element is a question mark</h3>
-</html>
+  <h2>External Styles</h2>
+  <p class="external-styles">This paragraph uses styles from the external stylesheet.</p>
 
-<?xml version="1.0" encoding="UTF-8"?>
-<breakfast_menu>
-
-<food>
-<name>Belgian Waffles</name>
-<price>$5.95</price>
-<description>Two of our famous Belgian Waffles with plenty of real maple syrup</description>
-<calories>650</calories>
-</food>
-
-<food>
-<name>Strawberry Belgian Waffles</name>
-<price>$7.95</price>
-<description>Light Belgian waffles covered with strawberries and whipped cream</description>
-<calories>900</calories>
-</food>
-
-<food>
-<name>Berry-Berry Belgian Waffles</name>
-<price>$8.95</price>
-<description>Light Belgian waffles covered with an assortment of fresh berries and whipped cream</description>
-<calories>900</calories>
-</food>
-
-<food>
-<name>French Toast</name>
-<price>$4.50</price>
-<description>Thick slices made from our homemade sourdough bread</description>
-<calories>600</calories>
-</food>
-
-<food>
-<name>Homestyle Breakfast</name>
-<price>$6.95</price>
-<description>Two eggs, bacon or sausage, toast, and our ever-popular hash browns</description>
-<calories>950</calories>
-</food>
-
-</breakfast_menu>
-Xslt stylesheet
-<?xml version="1.0" encoding="UTF-8"?>
-<html xsl:version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-<body style="font-family:Arial;font-size:12pt;background-color:#EEEEEE">
-<xsl:for-each select="breakfast_menu/food">
-  <div style="background-color:teal;color:white;padding:4px">
-    <span style="font-weight:bold"><xsl:value-of select="name"/> - </span>
-    <xsl:value-of select="price"/>
-    </div>
-  <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
-    <p>
-    <xsl:value-of select="description"/>
-    <span style="font-style:italic"> (<xsl:value-of select="calories"/> calories per serving)</span>
-    </p>
-  </div>
-</xsl:for-each>
 </body>
 </html>
 
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Typography Example</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evSX huddled7su3Wr6tXNqZxAEj0zT9y0TR0(hElq2s6BGLXhkmzNrE1p9YC6tSXz" crossorigin="anonymous">
+</head>
+<body>
+
+  <div class="container">
+
+    <h2>Responsive Headings</h2>
+    <h1 class="h1">This is a large heading</h1>
+    <h2 class="h2">This is a medium heading</h2>
+    <h3 class="h3">This is a small heading</h3>
+
+    <h2>Text with Different Sizes</h2>
+    <p class="lead">This is a lead paragraph with a larger font size.</p>
+    <p>This is a regular paragraph with default font size.</p>
+    <p class="small">This is a smaller paragraph with a reduced font size.</p>
+
+    <h2>Custom Font Size Example</h2>
+    <p class="fs-4">This paragraph has a font size of 1.25rem.</p>
+
+    <h2>Line Height Example</h2>
+    <h4 class="h4 lh-lg">This heading has a larger line height.</h4>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-OgwbZS7/BXzYhFVNqO1ayay4ucy8jqYOzEGUcbkYe//zjlxtZqKgONsTtStz09Kg" crossorigin="anonymous"></script>
+</body>
+</html>
