@@ -17,26 +17,45 @@ if (!isNaN(n) && n > 0) {
 
 
 
-exports.add = function (a, b) {
-    return a+b;
-}; 
- 
-// Returns difference of two numbers
-exports.subtract = function (a, b) {
-    return a-b;
-}; 
- 
-// Returns product of two numbers
-exports.multiply = function (a, b) {
-    return a*b;
-};
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal & Popover Example</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evSX huddled7su3Wr6tXNqZxAEj0zT9y0TR0(hElq2s6BGLXhkmzNrE1p9YC6tSXz" crossorigin="anonymous">
+</head>
+<body>
 
+  <div class="container">
 
-var calculator = require('./calculator');
- 
-var a=10, b=5;
- 
-console.log("Addition : "+calculator.add(a,b));
-console.log("Subtraction : "+calculator.subtract(a,b));
-console.log("Multiplication : "+calculator.multiply(a,b));
+    <h2>Modal Example</h2>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+      Launch modal
+    </button>
 
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="myModalLabel">Modal Title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            This is the modal content.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Popover Example</h2>
+    <button type="button" class="btn btn-info" data-bs-toggle="popover" data-bs-content="This is a popover!">Click for Info</button>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-OgwbZS7/BXzYhFVNqO1ayay4ucy8jqYOzEGUcbkYe//zjlxtZqKgONsTtStz09Kg" crossorigin="anonymous"></script>
+</body>
+</html>
