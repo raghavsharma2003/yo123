@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Store - Home</title>
+</head>
+<frameset rows="20%,80%">
+    <frame src="header.html" name="header">
+    <frame src="main.html" name="main">
+    <noframes>
+        <body>
+            <p>Your browser does not support frames.</p>
+        </body>
+    </noframes>
+</frameset>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+</head>
+<body>
+    <h1>Welcome to Online Book Store</h1>
+    <ul>
+        <li><a href="main.html" target="main">Home</a></li>
+        <li><a href="login.html" target="main">Login</a></li>
+        <li><a href="catalogue.html" target="main">Catalogue</a></li>
+        <li><a href="registration.html" target="main">Registration</a></li>
+    </ul>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+</head>
+<body>
+    <h2>Welcome to our Online Book Store!</h2>
+    <p>Explore our wide range of books and find your next great read.</p>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue</title>
+</head>
+<body>
+    <h2>Book Catalogue</h2>
+    <table border="1">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Availability</th>
+        </tr>
+        <tr>
+            <td>The Great Gatsby</td>
+            <td>F. Scott Fitzgerald</td>
+            <td>$10.99</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td>1984</td>
+            <td>George Orwell</td>
+            <td>$8.99</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td>To Kill a Mockingbird</td>
+            <td>Harper Lee</td>
+            <td>$7.99</td>
+            <td>Out of Stock</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+    <h2>Register</h2>
+    <form>
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
+
